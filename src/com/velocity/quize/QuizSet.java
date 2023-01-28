@@ -13,6 +13,7 @@ public class QuizSet {
 	
 	   public void display() {
         	int score = 0;
+        	
         	Scanner input = new Scanner(System.in) ;
         	System.out.println("Enter your Name >> ");
     		String name = input.next();
