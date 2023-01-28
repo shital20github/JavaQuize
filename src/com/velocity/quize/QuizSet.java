@@ -242,7 +242,9 @@ public class QuizSet {
 					stmt1.setInt(3, score);
 				
 			        stmt1.executeUpdate();
-					System.out.println("Insertion succesfully");
+					System.out.println("Quiz Result Inserted Successfully.....");
+					System.out.println("==============================================");
+					System.out.println("*****************THANK YOU********************");
 					con1.close();
 				    input.close();
 		}	
@@ -252,10 +254,6 @@ public class QuizSet {
 		{
 			e.printStackTrace();
 		}
-
-		
-	}
-        
-        
- }
+}
+}
         

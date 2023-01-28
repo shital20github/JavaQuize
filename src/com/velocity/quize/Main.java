@@ -7,11 +7,6 @@ public class Main {
 		
 		QuizSet qs = new QuizSet();
 		qs.display();
-		
-		
-		
-		
-		
-	}
+}
 }
 
