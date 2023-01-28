@@ -8,8 +8,7 @@ import java.sql.Statement;
 public class StudentRecord extends QuizSet {
 	
 	public void studentTable() {
-		try 
-	     {
+	 try {
 			
 		    Class.forName("com.mysql.cj.jdbc.Driver");
 		    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","root");
@@ -43,13 +42,13 @@ public class StudentRecord extends QuizSet {
 				stmt1.setString(2, name);
 				stmt1.setInt(3, score);
 			
-		                stmt1.executeUpdate();
+		        stmt1.executeUpdate();
 				con.close();
-		}
-			catch(Exception e) 
-			    {
-			         System.out.println(e);
-			    }
+		     }
+		catch(Exception e) 
+			 {
+			    System.out.println(e);
+			 }
 		 
 	}
 
