@@ -25,8 +25,7 @@ public class QuizSet {
     		System.out.println("****************************************");
 		 try
 		 {
-			 
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/questions","root","root");
+		    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/questions","root","root");
 			
 			PreparedStatement ps1 = con.prepareStatement("select * from questions where id = 1");
 			ResultSet rs1 = ps1.executeQuery();
