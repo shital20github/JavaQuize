@@ -31,26 +31,25 @@ public class QuizSet {
 			PreparedStatement ps1 = con.prepareStatement("select * from questions where id = 1");
 			ResultSet rs1 = ps1.executeQuery();
 			while(rs1.next())
-	
-			{
-				   System.out.println("Q1 "+rs1.getString(2));
-				   System.out.println("a) "+rs1.getString(3));
-				   System.out.println("b) "+rs1.getString(4));
-				   System.out.println("c) "+rs1.getString(5));
-				   System.out.println("d) "+rs1.getString(6));
+	      {
+		    System.out.println("Q1 "+rs1.getString(2));
+			System.out.println("a) "+rs1.getString(3));
+			System.out.println("b) "+rs1.getString(4));
+			System.out.println("c) "+rs1.getString(5));
+			System.out.println("d) "+rs1.getString(6));
 			      
-			       System.out.println("Enter your choice : ");
-			       String choice1 = input.next();
+			System.out.println("Enter your choice : ");
+			String choice1 = input.next();
 			       
-			       if (rs1.getString(7).equals(choice1)) {
-			    	 score++;
-			       }
-			}  	   
+			if (rs1.getString(7).equals(choice1)) 
+			{
+			    score++;
+			}
+		  }  	   
 			PreparedStatement ps2 = con.prepareStatement("select * from questions where id = 2");
 		    ResultSet rs2 = ps2.executeQuery();
 		    while(rs2.next())
-		
-			{
+		    {
 					System.out.println("Q2 "+rs2.getString(2));
 					System.out.println("a) "+rs2.getString(3));
 					System.out.println("b) "+rs2.getString(4));
@@ -68,8 +67,7 @@ public class QuizSet {
 		      PreparedStatement ps3 = con.prepareStatement("select * from questions where id = 3");
 		      ResultSet rs3 = ps3.executeQuery();
 		      while(rs3.next())
-		
-			{
+		      {
 					System.out.println("Q3 "+rs3.getString(2));
 					System.out.println("a) "+rs3.getString(3));
 					System.out.println("b) "+rs3.getString(4));
@@ -82,13 +80,11 @@ public class QuizSet {
 				    if (rs3.getString(7).equals(choice3)) {
 				    	 score++;
 				       }
-		
-			}
+		      }
 		      PreparedStatement ps4 = con.prepareStatement("select * from questions where id = 4");
 		      ResultSet rs4 = ps4.executeQuery();
 		      while(rs4.next())
-		
-			{
+		      {
 					System.out.println("Q4 "+rs4.getString(2));
 					System.out.println("a) "+rs4.getString(3));
 					System.out.println("b) "+rs4.getString(4));
@@ -100,13 +96,12 @@ public class QuizSet {
 				    
 				    if (rs4.getString(7).equals(choice4)) {
 				    	 score++;
-				       }
-			}
+				    }
+			  }
 		      PreparedStatement ps5 = con.prepareStatement("select * from questions where id = 5");
 		      ResultSet rs5 = ps5.executeQuery();
 		      while(rs5.next())
-		
-			{
+		      {
 					System.out.println("Q5 "+rs5.getString(2));
 					System.out.println("a) "+rs5.getString(3));
 					System.out.println("b) "+rs5.getString(4));
