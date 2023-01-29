@@ -33,7 +33,7 @@ public class Database {
 		  try {
 				Class.forName("com.mysql.cj.jdbc.Driver");
 				Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/questions","root","root");
-				String q = "insert into questions(question,option1, option2, option3,option4, answer)value(' Who invented Java Programming?','Guido van Rossum','James Gosling','Dennis Ritchie','Bjarne Stroustrup','b' ),('Which one of the following is not a Java feature?','Object-oriented','Use of pointers','Portable','Dynamic and Extensible','b'),('Which environment variable is used to set the java path?','MAVEN_Path','JavaPATH','JAVA','JAVA_HOME','d'),('What is the extension of java code files?','.js','.txt','.class','.java','d'),('Which of the following is a superclass of every class in Java?','ArrayList','Abstract Class','Object Class','String','c'),('Which of these keywords are used for the block to be examined for exceptions?','check','throw','catch','try','d'),('Which one of the following is not an access modifier?','protected','void','public','private','b'),('What is the return type of the hashCode() method in the Object class?','Object','int','long','void','b'),('In which process, a local variable has the same name as one of the instance variables?','Serialization','Variable Shadowing','Abstraction','Multi-threading','b'),('Which package contains the Random class?','java.util package','java.lang package','java.awt package','java.io package','a')";
+				String q = "insert into questions(question,option1, option2, option3,option4, answer)values(' Who invented Java Programming?','Guido van Rossum','James Gosling','Dennis Ritchie','Bjarne Stroustrup','b' ),('Which one of the following is not a Java feature?','Object-oriented','Use of pointers','Portable','Dynamic and Extensible','b'),('Which environment variable is used to set the java path?','MAVEN_Path','JavaPATH','JAVA','JAVA_HOME','d'),('What is the extension of java code files?','.js','.txt','.class','.java','d'),('Which of the following is a superclass of every class in Java?','ArrayList','Abstract Class','Object Class','String','c'),('Which of these keywords are used for the block to be examined for exceptions?','check','throw','catch','try','d'),('Which one of the following is not an access modifier?','protected','void','public','private','b'),('What is the return type of the hashCode() method in the Object class?','Object','int','long','void','b'),('In which process, a local variable has the same name as one of the instance variables?','Serialization','Variable Shadowing','Abstraction','Multi-threading','b'),('Which package contains the Random class?','java.util package','java.lang package','java.awt package','java.io package','a')";
 				
 				Statement stmt1 = con.createStatement();
 			
@@ -48,6 +48,12 @@ public class Database {
 					System.out.println(e);
 				}
 				
+	  }
+	  
+	  public static void main( String [] args) {
+		  
+		  Database db = new Database();
+		  db.insertQuestion();
 	  }
 }
 	
